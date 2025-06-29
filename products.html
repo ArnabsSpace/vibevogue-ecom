@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Local Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="slick/slick-theme.css">
+    <link rel="stylesheet" href="slick/slick.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <script type="module">
+        import { loadHeader } from './components/header.js';
+        loadHeader();
+    </script>
+    <div id="app">
+        <section class="shopBannerWrap">
+            <div class="shopBannerInner">
+                <img src="images/shopBanner@1x.png" srcset="images/shopBanner@1x.png 1x, images/shopBanner@2x.png 2x" width="" height="" alt="shop banner" class="img-fluid">
+            </div>
+        </section>
+
+        <section class="shopProductWrap py-5">
+            <div class="container">
+                <div class="row">
+                    <!-- Filter Component -->
+                    <div class="col-lg-3 col-md-12 col-sm-12 col-12">
+                        <!-- Desktop Filter -->
+                        <aside class="vv-filter-box d-none d-lg-block rounded">
+                            
+
+                            <div class="accordion vv-filter-accordion" id="vvFilterAccordionDesktop">
+                                
+
+                                <h5 class="mb-3">Filter</h5>
+
+                                <div class="vibeV-filter-box ">
+
+                                    <div class="accordion" id="vibeVFilterAccordion">
+                                        <!-- Sort By -->
+                                        <div class="accordion-item border-0 mb-2">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed vibeV-filter-btn bg-dark text-white px-3 py-2" type="button" data-bs-toggle="collapse" data-bs-target="#vibeVSort">
+                                            <span class="vibeV-filter-icon me-2">
+                                                <svg class="plus-icon" width="16" height="16" viewBox="0 0 24 24"><path fill="white" d="M19 11H13V5h-2v6H5v2h6v6h2v-6h6z"/></svg>
+                                                <svg class="minus-icon d-none" width="16" height="16" viewBox="0 0 24 24"><path fill="white" d="M19 13H5v-2h14v2z"/></svg>
+                                            </span>
+                                            Sort By
+                                            </button>
+                                        </h2>
+                                        <div id="vibeVSort" class="accordion-collapse collapse">
+                                            <div class="accordion-body">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="sort" id="lowToHigh" value="lowToHigh">
+                                                <label class="form-check-label" for="lowToHigh">Price: Low to High</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="sort" id="highToLow" value="highToLow">
+                                                <label class="form-check-label" for="highToLow">Price: High to Low</label>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        </div>
+
+                                       
+
+                                        
+
+                                        <!-- Color -->
+                                        <div class="accordion-item border-0 mb-0">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button vibeV-filter-btn bg-dark text-white px-3 py-2" type="button" data-bs-toggle="collapse" data-bs-target="#vibeVColor">
+                                            <span class="vibeV-filter-icon me-2">
+                                                <svg class="plus-icon d-none" width="16" height="16" viewBox="0 0 24 24"><path fill="white" d="M19 11H13V5h-2v6H5v2h6v6h2v-6h6z"/></svg>
+                                                <svg class="minus-icon" width="16" height="16" viewBox="0 0 24 24"><path fill="white" d="M19 13H5v-2h14v2z"/></svg>
+                                            </span>
+                                            Color
+                                            </button>
+                                        </h2>
+                                        <div id="vibeVColor" class="accordion-collapse collapse show">
+                                            <div class="accordion-body">
+                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="colorBlack" value="#000000"><label class="form-check-label ms-1" for="colorBlack"><span class="dot bg-black me-1"></span>Black</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="colorRed" value="#FF0000"><label class="form-check-label ms-1" for="colorRed"><span class="dot bg-danger me-1"></span>Red</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="colorGreen" value="#00FF00"><label class="form-check-label ms-1" for="colorGreen"><span class="dot bg-success me-1"></span>Green</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="colorBlue" value="#0000FF"><label class="form-check-label ms-1" for="colorBlue"><span class="dot bg-primary me-1"></span>Dark Blue</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="colorOrange" value="#FFA500"><label class="form-check-label ms-1" for="colorOrange"><span class="dot bg-warning me-1"></span>Orange</label></div>
+                                            </div>
+                                        </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- Add more items as needed -->
+                            </div>
+
+
+                            
+
+                        </aside>
+
+
+                        <!-- Mobile Filter Toggle -->
+                        <div class="d-lg-none d-flex justify-content-between align-items-center p-3 border bg-white">
+                            <h5 class="mb-0">Filter</h5>
+                            <button class="btn p-0 border-0 bg-transparent vv-filter-toggle" aria-label="Toggle Filter">
+                            <svg width="24" height="24" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke="#000" stroke-width="2" stroke-linecap="round"/></svg>
+                            </button>
+                        </div>
+
+                        <!-- Mobile Filter Drawer -->
+                        <div class="vv-filter-drawer d-lg-none">
+                            <div class="d-flex justify-content-between align-items-center p-3 border-bottom bg-white">
+                            <h5 class="mb-0">Filter</h5>
+                            <button class="btn p-0 border-0 bg-transparent vv-filter-close">
+                                <svg width="24" height="24" viewBox="0 0 24 24"><path d="M6 6l12 12M6 18L18 6" stroke="#000" stroke-width="2"/></svg>
+                            </button>
+                            </div>
+                            <div class="accordion p-3" id="vvFilterAccordionMobile">
+                            <h5 class="mb-3">Filter</h5>
+
+                                <div class="vibeV-filter-box ">
+
+                                    <div class="accordion" id="vibeVFilterAccordion">
+                                        <!-- Sort By -->
+                                        <div class="accordion-item border-0 mb-2">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed vibeV-filter-btn bg-dark text-white px-3 py-2" type="button" data-bs-toggle="collapse" data-bs-target="#vibeVSort">
+                                            <span class="vibeV-filter-icon me-2">
+                                                <svg class="plus-icon" width="16" height="16" viewBox="0 0 24 24"><path fill="white" d="M19 11H13V5h-2v6H5v2h6v6h2v-6h6z"/></svg>
+                                                <svg class="minus-icon d-none" width="16" height="16" viewBox="0 0 24 24"><path fill="white" d="M19 13H5v-2h14v2z"/></svg>
+                                            </span>
+                                            Sort By
+                                            </button>
+                                        </h2>
+                                        <div id="vibeVSort" class="accordion-collapse collapse">
+                                            <div class="accordion-body">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="sort" id="lowToHigh">
+                                                <label class="form-check-label" for="lowToHigh">Price: Low to High</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="sort" id="highToLow">
+                                                <label class="form-check-label" for="highToLow">Price: High to Low</label>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        </div>
+
+                                        <!-- Size -->
+                                        <div class="accordion-item border-0 mb-2">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed vibeV-filter-btn bg-dark text-white px-3 py-2" type="button" data-bs-toggle="collapse" data-bs-target="#vibeVSize">
+                                            <span class="vibeV-filter-icon me-2">
+                                                <svg class="plus-icon" width="16" height="16" viewBox="0 0 24 24"><path fill="white" d="M19 11H13V5h-2v6H5v2h6v6h2v-6h6z"/></svg>
+                                                <svg class="minus-icon d-none" width="16" height="16" viewBox="0 0 24 24"><path fill="white" d="M19 13H5v-2h14v2z"/></svg>
+                                            </span>
+                                            Size
+                                            </button>
+                                        </h2>
+                                        <div id="vibeVSize" class="accordion-collapse collapse">
+                                            <div class="accordion-body">
+                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="sizeXS"><label class="form-check-label" for="sizeXS">XS</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="sizeS"><label class="form-check-label" for="sizeS">S</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="sizeM"><label class="form-check-label" for="sizeM">M</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="sizeL"><label class="form-check-label" for="sizeL">L</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="sizeXL"><label class="form-check-label" for="sizeXL">XL</label></div>
+                                            </div>
+                                        </div>
+                                        </div>
+
+                                        <!-- Collection Tag -->
+                                        <div class="accordion-item border-0 mb-2">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed vibeV-filter-btn bg-dark text-white px-3 py-2" type="button" data-bs-toggle="collapse" data-bs-target="#vibeVTag">
+                                            <span class="vibeV-filter-icon me-2">
+                                                <svg class="plus-icon" width="16" height="16" viewBox="0 0 24 24"><path fill="white" d="M19 11H13V5h-2v6H5v2h6v6h2v-6h6z"/></svg>
+                                                <svg class="minus-icon d-none" width="16" height="16" viewBox="0 0 24 24"><path fill="white" d="M19 13H5v-2h14v2z"/></svg>
+                                            </span>
+                                            Collection Tag
+                                            </button>
+                                        </h2>
+                                        <div id="vibeVTag" class="accordion-collapse collapse">
+                                            <div class="accordion-body">
+                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="tagCasual"><label class="form-check-label" for="tagCasual">Casual</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="tagParty"><label class="form-check-label" for="tagParty">Party</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="tagFormal"><label class="form-check-label" for="tagFormal">Formal</label></div>
+                                            </div>
+                                        </div>
+                                        </div>
+
+                                        <!-- Color -->
+                                        <div class="accordion-item border-0 mb-0">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button vibeV-filter-btn bg-dark text-white px-3 py-2" type="button" data-bs-toggle="collapse" data-bs-target="#vibeVColor">
+                                            <span class="vibeV-filter-icon me-2">
+                                                <svg class="plus-icon d-none" width="16" height="16" viewBox="0 0 24 24"><path fill="white" d="M19 11H13V5h-2v6H5v2h6v6h2v-6h6z"/></svg>
+                                                <svg class="minus-icon" width="16" height="16" viewBox="0 0 24 24"><path fill="white" d="M19 13H5v-2h14v2z"/></svg>
+                                            </span>
+                                            Color
+                                            </button>
+                                        </h2>
+                                        <div id="vibeVColor" class="accordion-collapse collapse show">
+                                            <div class="accordion-body">
+                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="colorBlack"><label class="form-check-label ms-1" for="colorBlack"><span class="dot bg-black me-1"></span>Black</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="colorRed"><label class="form-check-label ms-1" for="colorRed"><span class="dot bg-danger me-1"></span>Red</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="colorGreen"><label class="form-check-label ms-1" for="colorGreen"><span class="dot bg-success me-1"></span>Green</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="colorBlue"><label class="form-check-label ms-1" for="colorBlue"><span class="dot bg-primary me-1"></span>Dark Blue</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="colorOrange"><label class="form-check-label ms-1" for="colorOrange"><span class="dot bg-warning me-1"></span>Orange</label></div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-9 col-md-12 col-sm-12 col-12">
+                        <div class="row" id="productContainer">
+                            
+                            
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+
+
+
+
+
+
+
+    <script type="module">
+        import { loadFooter } from './components/footer.js';
+        loadFooter();
+    </script>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+     <script src="js/bootstrap.bundle.min.js"></script>
+     <script src="slick/slick.min.js"></script>
+     <script src="js/main.js"></script>
+     <script src="js/common.js"></script>
+     <script src="js/data.js"></script>
+     <script src="js/shopFunction.js"></script>
+     <script src="js/filter.js"></script>
+     <script src="js/wiselist.js"></script>
+     
+     <!-- <script src="js/productPage.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,654 @@
+@import url(common.css);
+
+
+.vv-heroBg1 {
+  background-image: url('../images/homebanner1@1x.png')
+}
+
+.vv-heroBg2 {
+  background-image: url('../images/homebanner2@1x.png')
+}
+
+.vv-heroBg3 {
+  background-image: url('../images/homebanner3@1x.png')
+}
+
+.vv-hero-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  /* max-height: 450px; */
+  height: 100%;display: flex;
+}
+
+.vv-hero-banner {
+  background-color: var(--secondary-yellow);
+  overflow: hidden;
+}
+
+.vv-hero-content h1 {
+  font-size: 2.5rem;
+}
+
+.vv-hero-image-slider {
+  height: 100%;
+}
+
+.vv-hero-image {
+  /* height: 500px; */
+  background-size: contain;
+  background-position: center;
+  border-radius: 0;
+}
+
+section.heroBannerBlog {
+    background: var(--secondary-yellow);
+    margin-bottom: 50px;
+}
+.bnnerTopSubHd {
+        font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: 0px;
+}
+h1.bannertextHead {
+    font-family: var(--font-heading);
+        font-size: 6rem;
+    line-height: 5rem;
+    color: var(--secondary);
+    font-weight: 500;
+}
+h1.bannertextHead span{
+    font-family: var(--font-heading);
+        font-size: 6rem;
+    line-height: 5rem;
+    color: var(--primary);
+}
+
+.vv-hero-image img.img-fluid {
+    max-width: 500px;
+    height: 500px;
+    object-fit: contain;
+    margin: 0 auto;
+    position: relative;
+    top: 32px;
+}
+.vv-hero-image-slider {
+  /* background: radial-gradient(circle, #FFFFFF 0%, var(--secondary-yellow) 100%); */
+  position: relative;
+}
+.vv-hero-image-slider:before
+ {
+    content: "";
+    background-image: url(../images/elepsRound.png);
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.vv-section-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0px auto 2rem;
+}
+h2.commonHeadingBox {
+    font-size: 3rem;
+}
+
+.vv-showcase-overlay h5 {
+    font-weight: 600;
+    font-family: var(--font-body);
+    color: var(--white);
+}
+a.handPickedFromShop .vv-showcase-overlay {
+  transition: background-color 0.5s ease-in-out;
+}
+a.handPickedFromShop:hover .vv-showcase-overlay{
+      background-color: #1E1E1E;
+
+}
+#vv-header.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  transition: all 0.3s ease;
+  background: #fff;
+}
+
+#vv-header.is-scrolling {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(0);
+}
+.vv-showcase-card {
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.vv-showcase-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.vv-showcase-card:hover img {
+  transform: scale(1.05);
+}
+
+.vv-showcase-overlay {
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    right: 0;
+    background: #1E1E1E80;
+    padding: 15px;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+    max-width: 90%;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+.vv-showcase-card:hover .vv-showcase-overlay {
+  transform: translateY(100%);
+}
+.vv-showcase-card {
+    background: #5f6c7b45;
+    transition: background-color 0.5s ease-in-out;
+}
+a.handPickedFromShop:hover .vv-showcase-card {
+  background: #5f6c7b1a;
+}
+@media (max-width: 768px) {
+  .vv-hero-content {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  /* .vv-hero-image {
+    height: 300px;
+  } */
+}
+
+
+
+
+
+.icontrackBox {
+  background-color: #00000050;
+    padding: 8px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border-radius: 50px;
+    overflow: hidden;
+}
+.innerIcontrackWrap {
+  background-color: var(--secondary);
+    padding: 8px;
+    border-radius: 50px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+h6.fw-bold.ftrIconBxhd {
+    font-size: 1.20rem;
+    color: var(--secondary);
+    font-family: var(--font-body);
+}
+
+
+
+
+
+.vv-collection-box {
+  background-color: var(--secondary-yellow);
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.vv-img-cover {
+  max-height: 490px;
+  object-fit: contain;
+}
+
+.textWrapvvCollection1
+ {
+        position: absolute;
+    max-width: 280px;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+.textWrapvvCollection1 h4, .textWrapvvCollection3 h5, .textWrapvvCollection2 h5 {
+    font-size: 3rem;
+}
+.textWrapvvCollection1 h6, .textWrapvvCollection3 h6, .textWrapvvCollection2 h6
+ {
+    font-size: 16px;
+    font-weight: 600;
+    font-family: var(--font-body);
+}
+.textWrapvvCollection1 p {
+  font-weight: 500;
+}
+
+.vv-collection-box a {
+    width: 145px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+}
+.textWrapvvCollection2 {
+    position: absolute;
+    right: 0%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+}
+
+.vvCollectionImageWrap1 {
+    width: 100%;
+    text-align: right;
+    position: relative;
+    right: 80px;
+}
+.textWrapvvCollection3 {
+    position: absolute;
+    left: 30%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+.vv-collection-box {
+  cursor: pointer;
+}
+.vv-collection-box .img-fluid {
+  transition: all 0.5s ease-in-out;
+}
+.vv-collection-box:hover .img-fluid {
+  transform: scale(1.1);
+}
+.vvCollectionImageWrap3 {
+    position: relative;
+    left: -24px;
+}
+
+
+@media (max-width: 768px) {
+  .vv-collection-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .vv-collection-box .w-50,
+  .vv-collection-box .w-60,
+  .vv-collection-box .w-40 {
+    width: 100% !important;
+  }
+
+  .vv-img-cover {
+    max-height: 220px;
+    margin-top: 1rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+.vv-sale-countdown-section {
+  position: relative;
+}
+.vvSaleCuntDownContainer {
+  background-color: var(--secondary-yellow);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.vv-sale-image {
+  max-height: 500px;
+  object-fit: cover;
+}
+
+.vv-timer-box {
+  background-color: #D79B94;
+    color: white;
+    padding: 0px 0px;
+    text-align: center;
+    border-radius: 50px;
+    min-width: 75px;
+    height: 75px;
+    width: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.vv-time-num {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.vv-sale-content h2 {
+    font-size: 3rem;
+}
+.vv-time-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+.vv-sale-group-image {
+    max-height: 500px;
+    object-fit: contain;
+    position: relative;
+    right: -18px;
+}
+
+@media (max-width: 768px) {
+  .vv-sale-timer {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .vv-timer-box {
+    margin-bottom: 10px;
+  }
+}
+
+
+
+.vv-review-card h6 {
+    font-size: 1.25rem;
+    font-family: var(--font-body);
+}
+
+
+
+.vv-review-card {
+  background-color: var(--secondary-yellow);
+  min-height: 180px;
+  margin: 0px 8px;
+}
+
+.vv-star-icon {
+  color: #f7b500;
+  font-size: 1rem;
+  margin-right: 2px;
+}
+.vv-sale-content a {
+    width: fit-content;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+}
+
+.vv-product-card {
+  width: 100%;
+  transition: box-shadow 0.3s ease;
+}
+
+.vv-product-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.vv-discount-badge {
+  font-size: 0.75rem;
+  padding: 0.3em 0.6em;
+  border-radius: 0.25rem;
+}
+
+.vv-fav-btn
+ {
+    width: 30px;
+    height: 30px;
+    background: #ffffff !important;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vv-fav-btn svg {
+      color: var(--secondary-yellow);
+    transition: color 0.3s;
+    stroke: var(--secondary-light);
+    width: 20px;
+    height: 20px;
+        position: relative;
+    top: 1px;
+}
+
+.vv-fav-btn.active svg {
+  fill: var(--secondary-light);
+}
+
+.vv-fav-btn:hover svg {
+  color: var(--secondary-light);
+}
+
+.vv-product-img img {
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.vv-product-title {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.vv-color-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.vv-product-card {
+  position: relative;
+      margin: 8px;
+}
+
+.customCardProdHead {
+    position: absolute;
+    width: 90%;
+    left: 50%;
+    top: 16px;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.vv-product-img {
+    max-height: 512px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.vv-product-card .vv-product-img img {
+  transition: all 0.5s ease-in-out;
+
+}
+.vv-product-card:hover .vv-product-img img {
+  transform: scale(1.1);
+}
+
+.vv-slick-products {
+    padding: 0px;
+}
+a.prodCardAnchor {
+  text-decoration: none;
+}
+
+a.prodCardAnchor h6.vv-product-title {
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-bottom: 16px !important;
+    color: var(--primary);
+}
+.vv-product-info {
+    padding-bottom: 0.5rem;
+}
+
+
+section.vv-sale-countdown-section {
+    margin: 50px 0px 0px;
+    position: relative;
+}
+
+.vv-discount-banner {
+  background-color: var(--secondary-yellow);
+  border-radius: 5px;
+  font-size: 0.95rem;
+}
+
+
+
+.vv-discount-code {
+  background-color: #fff;
+  color: var(--secondary-light);
+  border: 2px dashed #f5d1c4;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+section.couponCodeSection span, section.couponCodeSection strong {
+    font-size: 1.25rem;
+}
+
+section.couponCodeSection span.vv-discount-code {
+    font-size: 1.5rem;
+}
+
+
+
+
+.shopBannerInner img.img-fluid
+ {
+    width: 100%;
+}
+
+
+
+
+.vv-filter-drawer {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 90%;
+  max-width: 320px;
+  height: 100vh;
+  background-color: #fff;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+  transition: right 0.4s ease;
+  z-index: 1050;
+}
+.vv-filter-drawer.active {
+  right: 0;
+}
+.vv-filter-box .accordion-button::after {
+  display: none; /* optional: hide default Bootstrap arrow */
+}
+.vv-filter-box svg,
+.vv-filter-drawer svg {
+  vertical-align: middle;
+}
+.vv-filter-btn {
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.vv-filter-box h5 {
+  font-size: 2rem;
+}
+
+.vv-filter-accordion .accordion-item
+ {
+    border: 1px solid #000000;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+
+
+  .vv-breadcrumb {
+  font-size: 14px;
+  background-color: transparent;
+}
+
+.vv-breadcrumb .breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.vv-breadcrumb .breadcrumb-item {
+  margin: 0;
+}
+
+.vv-breadcrumb .breadcrumb a {
+  text-decoration: none;
+  color: #6c757d; /* muted text */
+  font-weight: 500;
+}
+
+.vv-breadcrumb .breadcrumb-item.active {
+  font-weight: 500;
+  color: #6c757d;
+}
+
+.vv-breadcrumb .breadcrumb-separator {
+  font-weight: normal;
+  color: #6c757d;
+}
+
+
+
+.vv-contact-info {
+  background-color: #fdfdfd;
+}
+
+.vv-contact-card svg {
+  display: inline-block;
+  stroke: #444;
+}
+.vv-contact-form-section input,
+.vv-contact-form-section textarea {
+  border-color: #f5f5f5;
+  font-size: 14px;
+}
+
+
+
+.vibeV-filter-btn { font-size: 14px; }
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.accordion-button::after { display: none; }

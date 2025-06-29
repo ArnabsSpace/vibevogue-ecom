@@ -1,0 +1,92 @@
+@import url(common.css);
+ .auth-container {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+    .auth-box {
+      max-width: 400px;
+      margin: auto;
+    }
+    .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    .logo span {
+      color: #c87676;
+    }
+    .form-control {
+      border-radius: 0;
+    }
+    .btn-auth {
+      background-color: #000;
+      color: #fff;
+      width: 100%;
+    }
+    .btn-auth:hover {
+      background-color: #222;
+    }
+    .image-side {
+      background-image: url('../images/login.png'); /* Replace with your image */
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+    }
+    .small-text {
+      font-size: 0.8rem;
+    }
+
+
+
+
+    .login-page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+    .login-left {
+      background-image: url('../images/signUp.png'); /* Replace with your image path */
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+    }
+    .login-right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .login-box {
+      max-width: 400px;
+      width: 100%;
+      padding: 2rem;
+    }
+    .login-logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .login-logo span {
+      color: #c87676;
+    }
+    .login-form h5 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    .btn-login {
+      background-color: #000;
+      color: #fff;
+      width: 100%;
+    }
+    .btn-login:hover {
+      background-color: #333;
+    }
+    .login-footer {
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 0.875rem;
+    }
+    .login-footer a {
+      color: #000;
+      text-decoration: underline;
+    }

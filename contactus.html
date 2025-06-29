@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Local Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="slick/slick-theme.css">
+    <link rel="stylesheet" href="slick/slick.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <script type="module">
+        import { loadHeader } from './components/header.js';
+        loadHeader();
+    </script>
+    <div id="app">
+        <nav class="vv-breadcrumb py-1 mt-5" aria-label="breadcrumb">
+            <div class="container">
+                <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item">
+                    <a href="#" class="text-muted">Shop</a>
+                </li>
+                <li class="breadcrumb-separator">/</li>
+                <li class="breadcrumb-item active text-muted" aria-current="page">
+                    Urban Style
+                </li>
+                </ol>
+            </div>
+        </nav>
+
+        <section class="vv-contact-info py-5">
+            <div class="container">
+                <div class="row g-4">
+                
+                <!-- Mail Address -->
+                <div class="col-md-4 col-sm-12">
+                    <div class="vv-contact-card p-4 text-center border rounded bg-white h-100">
+                    <div class="mb-3">
+                        <img src="images/mail.svg" alt="phone" class="img-fluid">
+                    </div>
+                    <h6 class="fw-bold">Mail Address</h6>
+                    <p class="mb-0 small">techbootmail@gmail.com<br>techbootmail@gmail.com</p>
+                    </div>
+                </div>
+
+                <!-- Office Address -->
+                <div class="col-md-4 col-sm-12">
+                    <div class="vv-contact-card p-4 text-center border rounded bg-white h-100">
+                    <div class="mb-3">
+                        <img src="images/map.svg" alt="phone" class="img-fluid">
+                    </div>
+                    <h6 class="fw-bold">Office address</h6>
+                    <p class="mb-0 small">Digital Agency Network<br>Eastbourne Terrace</p>
+                    </div>
+                </div>
+
+                <!-- Phone Number -->
+                <div class="col-md-4 col-sm-12">
+                    <div class="vv-contact-card p-4 text-center border rounded bg-white h-100">
+                    <div class="mb-3">
+                        <img src="images/phone.svg" alt="phone" class="img-fluid">
+                    </div>
+                    <h6 class="fw-bold">Phone Number</h6>
+                    <p class="mb-0 small">+880 123 456 789<br>+880 123 456 789</p>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="vv-contact-form-section pb-5">
+            <div class="container">
+                <div class="bg-white p-4 p-md-5 border rounded">
+                <h4 class="fw-bold mb-2">Drop Us a Line</h4>
+                <p class="text-muted mb-4 small">Your email address will not be published. Required fields are marked *</p>
+
+                <form id="vvContactForm">
+                    <div class="mb-3">
+                    <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="row g-3 mb-3">
+                    <div class="col-md-6">
+                        <input type="email" class="form-control" name="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="tel" class="form-control" name="phone" placeholder="Phone" required>
+                    </div>
+                    </div>
+                    <div class="mb-3">
+                    <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="mb-3">
+                    <textarea class="form-control" name="comment" rows="5" placeholder="Comment" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-dark">Send Message</button>
+                </form>
+
+                <div id="vvFormMessage" class="mt-4 text-success fw-bold d-none">Thank you! Your message has been sent.</div>
+                <div id="vvFormData" class="mt-3 d-none">
+                    <h6 class="fw-bold">Submitted Info:</h6>
+                    <ul class="list-unstyled small">
+                    <li><strong>Name:</strong> <span id="vvShowName"></span></li>
+                    <li><strong>Email:</strong> <span id="vvShowEmail"></span></li>
+                    <li><strong>Phone:</strong> <span id="vvShowPhone"></span></li>
+                    <li><strong>Subject:</strong> <span id="vvShowSubject"></span></li>
+                    <li><strong>Comment:</strong> <span id="vvShowComment"></span></li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </section>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+    <script type="module">
+        import { loadFooter } from './components/footer.js';
+        loadFooter();
+    </script>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+     <script src="js/bootstrap.bundle.min.js"></script>
+     <script src="slick/slick.min.js"></script>
+     <script src="js/main.js"></script>
+
+
+     <script>
+         const form = document.getElementById('vvContactForm');
+  const message = document.getElementById('vvFormMessage');
+  const dataBox = document.getElementById('vvFormData');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    let valid = true;
+
+    for (let [name, value] of formData.entries()) {
+      if (!value.trim()) {
+        alert(`Please fill out the ${name} field.`);
+        valid = false;
+        break;
+      }
+    }
+
+    if (valid) {
+      // Fill values
+      document.getElementById('vvShowName').innerText = formData.get('name');
+      document.getElementById('vvShowEmail').innerText = formData.get('email');
+      document.getElementById('vvShowPhone').innerText = formData.get('phone');
+      document.getElementById('vvShowSubject').innerText = formData.get('subject');
+      document.getElementById('vvShowComment').innerText = formData.get('comment');
+
+      // Show message and data
+      message.classList.remove('d-none');
+      dataBox.classList.remove('d-none');
+
+      // Optional: reset form
+      form.reset();
+    }
+  });
+     </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Local Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/loginSignup.css">
+
+</head>
+<body>
+
+    <section class="loginsignUp">
+        <div class="container-fluid auth-container">
+            <div class="row w-100">
+                <!-- Left Side - Form -->
+                <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                <div class="auth-box p-4">
+                    <div class="mb-4 text-center logo">
+                    <span style="color:#555;">V</span><span>Vibe</span><span style="color:#c87676;">Vogue</span>
+                    </div>
+                    <h5 class="mb-3 text-center">Create Account</h5>
+                    <form id="registerForm">
+                    <div class="mb-2">
+                        <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
+                    </div>
+                    <div class="mb-2">
+                        <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
+                    </div>
+                    <div class="mb-2">
+                        <input type="email" class="form-control" id="email" placeholder="Email" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="password" class="form-control" id="password" placeholder="Password" required>
+                    </div>
+                    <button type="submit" class="btn btn-auth">Register Now</button>
+                    </form>
+
+                    <div class="text-center mt-3">
+                    <span>Already Have An Account? </span>
+                    <a href="#" onclick="toggleForm()">Log In</a>
+                    </div>
+
+                    <p class="small-text text-center mt-2">
+                    By Clicking Register Now You Agree To VibeVogue’s
+                    <a href="#">Conditions</a> And <a href="#">Privacy Policy</a>
+                    </p>
+
+                    <!-- Login Form -->
+                    <form id="loginForm" style="display:none;">
+                    <h5 class="mt-4 text-center">Log In</h5>
+                    <div class="mb-2">
+                        <input type="email" class="form-control" id="loginEmail" placeholder="Email" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="password" class="form-control" id="loginPassword" placeholder="Password" required>
+                    </div>
+                    <button type="submit" class="btn btn-auth">Log In</button>
+                    <div class="text-center mt-3">
+                        <a href="#" onclick="toggleForm()">Create an Account</a>
+                    </div>
+                    </form>
+                </div>
+                </div>
+
+                <!-- Right Side - Image -->
+                <div class="col-lg-6 image-side d-none d-lg-block">
+                <!-- background image will show here -->
+                </div>
+            </div>
+            </div>
+    </section>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+     <script src="js/bootstrap.bundle.min.js"></script>
+     <!-- <script type="" src="js/loginSignup.js"></script> -->
+
+     <script type="module">
+  import { setupRegisterForm } from './js/loginSignup.js';
+  setupRegisterForm();
+</script>
+</body>
+</html>

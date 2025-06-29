@@ -1,0 +1,128 @@
+@import url(common.css);
+@media(max-width:767px) {
+    .vv-hero-image img.img-fluid {
+        max-width: 400px;
+        height: 400px;
+        object-fit: contain;
+        margin: 0 auto;
+        position: relative;
+        top: 0px;
+    }
+    .vv-hero-content {
+        order: 2;
+    }
+    h1.bannertextHead span {
+            font-size: 3.5rem;
+            line-height: 3rem;
+        }
+        h1.bannertextHead {
+            font-size: 3.5rem;
+            line-height: 3rem;
+        }
+        section.couponCodeSection span, section.couponCodeSection strong {
+            font-size: 1rem;
+        }
+        .vv-sale-image {
+            max-height: 100%;
+            object-fit: cover;
+            width: 100%;
+        }
+}
+
+@media(max-width:1024px) {
+    .textWrapvvCollection2 {
+        position: relative;
+        right: 0%;
+        top: 48px;
+        transform: translate(0%, 0%);
+        text-align: center;
+    }
+    .vvCollectionImageWrap2 {
+    order: 1;
+}
+.vv-collection-box a {
+    width: 145px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    margin: 5px 5px 5px auto;
+}
+.textWrapvvCollection2 h6 {
+    text-align: right;
+}
+.vvCollectionImageWrap3 {
+    position: relative;
+    left: 0px;
+}
+.vv-collection-box .textWrapvvCollection1 a, .vv-collection-box .textWrapvvCollection3 a
+ {
+    margin: 0 auto;
+}
+.textWrapvvCollection3 {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    transform: translate(0%);
+    z-index: 1;
+    margin: 16px;
+}
+.textWrapvvCollection1 {
+    position: relative;
+    max-width: 100%;
+    right: 0px;
+    top: 0%;
+    transform: translateY(0%);
+    z-index: 1;
+    margin: 16px auto;
+    text-align: center;
+}
+.vvCollectionImageWrap1
+ {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    right: 0px;
+}
+}
+
+
+@media (min-width: 992px) and (max-width: 1024px) {
+    .textWrapvvCollection2 {
+        position: relative;
+        right: 30%;
+        top: 0px;
+        transform: translate(0%, 0%);
+        text-align: center;
+        order: 2;
+    }
+    .textWrapvvCollection1 h4, .textWrapvvCollection3 h5, .textWrapvvCollection2 h5 {
+    font-size: 2rem;
+}
+ .textWrapvvCollection2 h5 {
+    text-align: right;
+}
+.textWrapvvCollection2 {
+        position: relative;
+        right: 5%;
+        top: 0px;
+        transform: translate(0%, 0%);
+        text-align: center;
+        order: 2;
+        width: 100%;
+    }
+        .textWrapvvCollection3 {
+        position: relative;
+        left: 0px;
+        top: 0px;
+        transform: translate(0%);
+        z-index: 1;
+        margin: 16px;
+        width: 100%;
+    }
+    .vv-collection-box .textWrapvvCollection1 a, .vv-collection-box .textWrapvvCollection3 a {
+        margin: 0 auto;
+        margin-left: 0;
+    }
+}
