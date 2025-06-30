@@ -32,28 +32,28 @@ export function loadFooter() {
         <div class="col-md-4">
             <h6 class="mb-3 commonftrHead">Information</h6>
             <ul class="list-unstyled small commonftrlist">
-            <li><a href="#" class="text-light text-decoration-none">Contact us</a></li>
-            <li><a href="#" class="text-light text-decoration-none">FAQs</a></li>
-            <li><a href="#" class="text-light text-decoration-none">About us</a></li>
-            <li><a href="#" class="text-light text-decoration-none">Blog</a></li>
+            <li><a href="contactus.html" class="text-light text-decoration-none">Contact us</a></li>
+            <li><a href="faq.html" class="text-light text-decoration-none">FAQs</a></li>
+            <li><a href="about.html" class="text-light text-decoration-none">About us</a></li>
+            <li><a href="blog.html" class="text-light text-decoration-none">Blog</a></li>
             </ul>
         </div>
         <div class="col-md-4">
             <h6 class="mb-3 commonftrHead">Quick Shop</h6>
             <ul class="list-unstyled small commonftrlist">
-            <li><a href="#" class="text-light text-decoration-none">Winter</a></li>
-            <li><a href="#" class="text-light text-decoration-none">Summer</a></li>
-            <li><a href="#" class="text-light text-decoration-none">Festive</a></li>
-            <li><a href="#" class="text-light text-decoration-none">Sweater</a></li>
-            <li><a href="#" class="text-light text-decoration-none">Skirt</a></li>
+            <li><a href="products.html" class="text-light text-decoration-none">Winter</a></li>
+            <li><a href="products.html" class="text-light text-decoration-none">Summer</a></li>
+            <li><a href="products.html" class="text-light text-decoration-none">Festive</a></li>
+            <li><a href="products.html" class="text-light text-decoration-none">Sweater</a></li>
+            <li><a href="products.html" class="text-light text-decoration-none">Skirt</a></li>
             </ul>
         </div>
         <div class="col-md-4">
             <h6 class="mb-3 commonftrHead">Customer Services</h6>
             <ul class="list-unstyled small commonftrlist">
-            <li><a href="#" class="text-light text-decoration-none">Privacy policy</a></li>
-            <li><a href="#" class="text-light text-decoration-none">Terms &amp; Conditions</a></li>
-            <li><a href="#" class="text-light text-decoration-none">FAQ</a></li>
+            <li><a href="privacy.html" class="text-light text-decoration-none">Privacy policy</a></li>
+            <li><a href="terms.html" class="text-light text-decoration-none">Terms &amp; Conditions</a></li>
+            <li><a href="faq.html" class="text-light text-decoration-none">FAQ</a></li>
             </ul>
         </div>
         </div>
@@ -63,12 +63,13 @@ export function loadFooter() {
 
       <!-- Mailing List -->
       <div class="col-lg-3 col-md-12 col-12">
-        <h6 class="mb-3 commonftrHead">Join Our Mailing List</h6>
+        <h6 class="mb-3 commonftrHead joinMailing">Join Our Mailing List</h6>
         <p class="small">Sign up to receive inspiration, product updates, and special offers from our team.</p>
-        <form class="d-flex newsletter-box-form">
+        <form id="newsletterForm" class="d-flex newsletter-box-form">
           <input type="email" class="form-control newsletter-input" placeholder="example@gmail.com" required>
           <button type="submit" class="btn newsletter-submit-btn">Submit</button>
         </form>
+        <p id="newsletterThankYou" class="small mt-2 text-success d-none">Thank you for subscribing!</p>
       </div>
     </div>
 

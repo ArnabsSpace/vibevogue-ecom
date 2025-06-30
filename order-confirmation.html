@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Order Details</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/checkout.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <script type="module">
+    import { loadHeader } from './components/header.js';
+    loadHeader();
+  </script>
+
+  <main class="py-5 bg-light">
+    <section>
+        <div class="container">
+      <h3 class="fw-bold mb-4">Order Details</h3>
+
+      <!-- Order Progress -->
+      <div class="bg-white p-4 border rounded shadow-sm mb-4">
+        <h5 class="mb-3 fw-semibold">Shipping Progress</h5>
+        <div class="row text-center">
+          <div class="col"><div class="step done">Order Placed</div></div>
+          <div class="col"><div class="step done">Processing</div></div>
+          <div class="col"><div class="step active">Shipped</div></div>
+          <div class="col"><div class="step">Delivered</div></div>
+        </div>
+      </div>
+
+      <!-- Ordered Items -->
+      <div class="bg-white p-4 border rounded shadow-sm mb-4" id="orderItems">
+        <!-- JS will populate -->
+      </div>
+
+      <!-- Billing Info -->
+      <div class="bg-white p-4 border rounded shadow-sm" id="shippingDetails">
+        <!-- JS will populate -->
+      </div>
+    </div>
+    </section>
+
+
+    
+  </main>
+
+  <!-- JS DATA + Logic -->
+  <script src="js/data.js"></script> <!-- ✅ This must define allShopProducts -->
+
+  <script>
+    const orders = JSON.parse(localStorage.getItem("vvOrders")) || [];
+    const user = localStorage.getItem("vvLoggedIn");
+
+    const orderEl = document.getElementById("orderItems");
+    const shippingEl = document.getElementById("shippingDetails");
+
+    if (!orders.length || !user) {
+      window.location.href = "products.html";
+    }
+
+    const userOrders = orders.filter(order => order.user === user);
+    if (!userOrders.length) {
+      window.location.href = "products.html";
+    }
+
+    let allOrderHTML = "";
+    let allShippingHTML = "";
+
+    userOrders.forEach((order, index) => {
+      const items = order.items.map(item => {
+        const product = allShopProducts.find(p => p.id === item.id);
+        if (!product) return "";
+
+        const colorName = product.colors.find(c => c.code === item.selectedColor)?.name || "Default";
+        const image = product.colors[0]?.images[0] || "images/default.png";
+
+        return `
+          <div class="d-flex mb-3">
+            <img src="${image}" class="rounded" width="80" alt="${product.name}" />
+            <div class="ms-3">
+              <h6 class="mb-1">${product.name}</h6>
+              <div class="text-muted small">Size: ${item.selectedSize || "-"}</div>
+              <div class="text-muted small">Color: ${colorName}</div>
+              <div class="fw-bold mt-2">₹${product.price} × ${item.quantity} = ₹${product.price * item.quantity}</div>
+            </div>
+          </div>
+        `;
+      }).join("");
+
+      const billing = order.billingInfo || {};
+      const paymentText = order.paymentType === 'cod' ? 'Cash on Delivery' : 'Card Payment';
+      const orderDate = new Date(order.createdAt).toLocaleString();
+
+      allOrderHTML += `
+        <div class="mb-4">
+          <h5 class="fw-semibold mb-3">Order #${index + 1} - ${order.status || "Order Placed"}</h5>
+          ${items}
+        </div>
+      `;
+
+      allShippingHTML += `
+        <div class="mb-4">
+          <h5 class="fw-semibold mb-3">Shipping Info (Order #${index + 1})</h5>
+          <p><strong>Name:</strong> ${billing.fullName || "N/A"}</p>
+          <p><strong>Email:</strong> ${billing.email || "N/A"}</p>
+          <p><strong>Phone:</strong> ${billing.phone || "N/A"}</p>
+          <p><strong>Address:</strong> ${billing.address || ""}, ${billing.city || ""}, ${billing.state || ""} - ${billing.zip || ""}</p>
+          <p><strong>Payment:</strong> ${paymentText}</p>
+          <p><strong>Order ID:</strong> ${order.id}</p>
+          <p><strong>Placed On:</strong> ${orderDate}</p>
+        </div>
+      `;
+    });
+
+    orderEl.innerHTML = allOrderHTML;
+    shippingEl.innerHTML = allShippingHTML;
+  </script>
+
+  <!-- Footer -->
+  <script type="module">
+    import { loadFooter } from './components/footer.js';
+    loadFooter();
+  </script>
+
+  <!-- Step styles -->
+  <style>
+    .step {
+      padding: 10px 15px;
+      border-radius: 20px;
+      background: #e0e0e0;
+      display: inline-block;
+    }
+    .step.done {
+      background: #c8e6c9;
+    }
+    .step.active {
+      background: #ffecb3;
+    }
+  </style>
+
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/common.js"></script>
+</body>
+</html>

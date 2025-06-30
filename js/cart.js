@@ -1,13 +1,31 @@
-// 
-
 import { handleCheckoutButton } from './cart-summary-handler.js';
-// Assuming 'products' array is already available (e.g. from products.js)
+
+// Assuming 'allShopProducts' is globally available (e.g., imported from products.js)
 const cartItemsEl = document.getElementById("cartItems");
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 function updateCart() {
   cartItemsEl.innerHTML = "";
+
+  const cartSummary = document.querySelector(".vv-cart-summary");
+
+  if (cart.length === 0) {
+    cartItemsEl.innerHTML = `
+      <div class="text-center py-5">
+        <h5 class="text-muted">🛒 Your cart is empty.</h5>
+        <p>Add some items to get started.</p>
+        <a href="products.html" class="btn btn-dark mt-3">Go to Shop</a>
+      </div>
+    `;
+
+    if (cartSummary) {
+      cartSummary.innerHTML = ""; // clear summary section
+    }
+
+    return; // stop execution if cart is empty
+  }
+
   let subtotal = 0;
   const deliveryFee = 15;
 
@@ -28,10 +46,10 @@ function updateCart() {
           <div class="fw-bold mt-2">₹${product.price}</div>
         </div>
         <div class="d-flex align-items-center gap-2">
-          <button class="btn btn-light btn-sm" onclick="decreaseQuantity(${index})">-</button>
+          <button class="btn btn-light btn-sm" onclick="window.decreaseQuantity(${index})">-</button>
           <span class="fw-bold">${item.quantity}</span>
-          <button class="btn btn-light btn-sm" onclick="increaseQuantity(${index})">+</button>
-          <button class="btn text-danger" onclick="removeItem(${index})">
+          <button class="btn btn-light btn-sm" onclick="window.increaseQuantity(${index})">+</button>
+          <button class="btn text-danger" onclick="window.removeItem(${index})">
             <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
               <path d="M9 3v1H4v2h1v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6h1V4h-5V3H9zm2 4h2v11h-2V7z"/>
             </svg>
@@ -39,15 +57,14 @@ function updateCart() {
         </div>
       </div>
     `;
-    
+
     cartItemsEl.insertAdjacentHTML("beforeend", itemHTML);
   });
 
-  // Update summary
   const discount = Math.round(subtotal * 0.2);
   const total = subtotal - discount + deliveryFee;
 
-  document.querySelector(".vv-cart-summary").innerHTML = `
+  cartSummary.innerHTML = `
     <h6 class="fw-bold mb-4">Order Summary</h6>
     <div class="d-flex justify-content-between mb-2">
       <span>Subtotal</span>
@@ -76,29 +93,58 @@ function updateCart() {
       </svg>
     </button>
   `;
-handleCheckoutButton();
 
+  handleCheckoutButton();
 }
 
-function increaseQuantity(index) {
+
+// Make functions global
+window.increaseQuantity = function (index) {
   cart[index].quantity += 1;
   localStorage.setItem("cart", JSON.stringify(cart));
   updateCart();
-}
+};
 
-function decreaseQuantity(index) {
+window.decreaseQuantity = function (index) {
   cart[index].quantity -= 1;
   if (cart[index].quantity <= 0) {
-    cart.splice(index, 1); // remove if 0
+    cart.splice(index, 1);
   }
   localStorage.setItem("cart", JSON.stringify(cart));
   updateCart();
-}
+};
 
-function removeItem(index) {
+window.removeItem = function (index) {
   cart.splice(index, 1);
   localStorage.setItem("cart", JSON.stringify(cart));
   updateCart();
-}
+  updateCartCount()
+  redirectIfCartEmpty()
+};
 
 updateCart();
+
+
+
+function updateCartCount() {
+  setTimeout(() => {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const totalCount = cart.reduce((total, item) => total + item.quantity, 0);
+    const cartBadge = document.getElementById("cartHeadRound");
+
+    if (cartBadge) {
+      cartBadge.innerText = totalCount;
+    }
+  }, 100); // Delay to ensure header is loaded (adjust if needed)
+}
+
+
+function redirectIfCartEmpty() {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  if (cart.length === 0) {
+    window.location.href = "products.html";
+  }
+}
+
+// Call it immediately on page load
+redirectIfCartEmpty();

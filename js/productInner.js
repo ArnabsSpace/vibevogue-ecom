@@ -44,7 +44,7 @@ function renderFullProduct(product) {
 <span class="text-muted small">${product.ratingCount}k Rating</span>
 </div>
 <div class="vv-price mt-3">
-<h4 class="">${product.price} <span class="mainPriceInnerOld">MRP. <strong>${product.originalPrice}</strong></span> <span class="offInnerPrice">(${discount}% OFF)</span></h4>
+<h4 class="">₹${product.price} <span class="mainPriceInnerOld">MRP. <strong>₹${product.originalPrice}</strong></span> <span class="offInnerPrice">(${discount}% OFF)</span></h4>
 <p class="text-muted small">Inclusive of all taxes*</p>
 </div>
 

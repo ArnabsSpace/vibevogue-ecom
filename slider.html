@@ -19,32 +19,17 @@
         loadHeader();
     </script>
     <div id="app">
-        <nav class="vv-breadcrumb py-1 mt-5" aria-label="breadcrumb">
-            <div class="container">
-                <ol class="breadcrumb mb-0">
-                <li class="breadcrumb-item">
-                    <a href="#" class="text-muted">Shop</a>
-                </li>
-                <li class="breadcrumb-separator">/</li>
-                <li class="breadcrumb-item active text-muted" aria-current="page">
-                    Urban Style
-                </li>
-                </ol>
-            </div>
-        </nav>
+        <!-- hero banner section -->
+       
 
 
+      
 
-        <section class="cartSectionmain">
-            <div class="container py-5 vv-cart-page">
-                  <div class="row g-4" id="wishlistContainer">
-                      
-                  </div>
-                </div>
+    
 
-        </section>
+   
 
-        <section class="prodCardSection mb-5" >
+        <section class="prodCardSection">
           <div class="container">
 
            
@@ -56,14 +41,21 @@
             </div>
            
             <div class="row">
-              <div class="vv-slick-products" id="sliderBlack"">
-                
+              <div class="vv-slick-products" id="sliderBlack">
+            
               </div>
               
 
             </div>
           </div>
         </section>
+
+
+ 
+
+
+
+      
 
     </div>
 
@@ -81,19 +73,28 @@
 
     <script src="js/jquery-3.7.1.min.js"></script>
      <script src="js/bootstrap.bundle.min.js"></script>
-     <script src="slick/slick.min.js"></script>
-     <script src="js/main.js"></script>
-      <script src="js/data.js"></script>
-      <script src="js/common.js"></script>
-      <script src="js/wiselist.js"></script>
-      <script src="js/wishPage.js"></script>
-      <script src="js/sliderComponent.js"></script>
+     <script src="slick/slick.min.js"></script>   
+    
+     <script src="js/common.js"></script>
+     <!-- <script src="js/productPage.js"></script> -->
+     
+      <script src="js/data.js"></script> 
+     
+   
+     <script src="js/slider.js"></script>
 
-      <script>
+     <script>
         document.addEventListener("DOMContentLoaded", function () {
             renderStaticSlider("sliderBlack", "Black", 6);
+            // renderStaticSlider("sliderRed", "Red", 4);
         });
         </script>
+     <!-- <script src="js/wiselist.js"></script> -->
      
+
+
+   
+
+
 </body>
 </html>

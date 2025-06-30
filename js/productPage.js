@@ -55,7 +55,7 @@ function renderFullProduct(product) {
 <span class="text-muted small">${product.ratingCount}k Rating</span>
 </div>
 <div class="vv-price mt-3">
-<h4 class="">${product.price} <span class="mainPriceInnerOld">MRP. <strong>${product.originalPrice}</strong></span> <span class="offInnerPrice">(${discount}% OFF)</span></h4>
+<h4 class="">₹${product.price} <span class="mainPriceInnerOld">MRP. <strong>₹${product.originalPrice}</strong></span> <span class="offInnerPrice">(${discount}% OFF)</span></h4>
 <p class="text-muted small">Inclusive of all taxes*</p>
 </div>
 
@@ -78,6 +78,7 @@ function renderFullProduct(product) {
 
 <div class="mt-4">
 <button class="btn btn-dark w-100" type="button" id="addToCartBtn">Add To Cart</button>
+<button class="btn btn-dark w-100 offLoad" type="button" id="goToCartBtn">Go To Cart</button>
 </div>
 
 
@@ -134,9 +135,19 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem("cart", JSON.stringify(cart));
 
     // ✅ Update Add to Cart Button
-    addToCartBtn.innerHTML = "Added to Cart";
-    addToCartBtn.classList.add("disabledAddToCart");
+    addToCartBtn.innerHTML = "Go To Cart";
+    addToCartBtn.classList.add("offLoad");
+    const gotocartbtn = document.getElementById('goToCartBtn');
+    gotocartbtn.classList.remove('offLoad');
     addToCartBtn.setAttribute("disabled", true);
+
+//     addToCartBtn.classList.add("disabledAddToCart"); // Optional: style purpose only
+// addToCartBtn.removeAttribute("disabled");
+
+// // Add event listener for redirecting to cart
+gotocartbtn.addEventListener("click", function handleGoToCartClick() {
+  window.location.href = "cart.html";
+});
 
     // ✅ Update cart count in header
     updateCartHeaderCount();

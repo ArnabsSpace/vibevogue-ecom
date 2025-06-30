@@ -126,3 +126,11 @@
         margin-left: 0;
     }
 }
+
+
+@media(max-width:667px) {
+    .vv-product-card {
+    position: relative;
+    margin: 8px 0px;
+}
+}

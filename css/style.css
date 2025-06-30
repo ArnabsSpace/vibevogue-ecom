@@ -652,3 +652,32 @@ section.couponCodeSection span.vv-discount-code {
   border-radius: 50%;
 }
 .accordion-button::after { display: none; }
+
+
+.vv-fade-down {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.vv-fade-down.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+.offLoad {
+  display: none !important;
+}
+
+.vv-filter-drawer.openVVmobFilter {
+    right: 0;
+}
+
+
+.vv-about-who img {
+  border-radius: 1rem;
+  max-width: 100%;
+}
+
+.vv-about-values svg {
+  margin-bottom: 0.5rem;
+}

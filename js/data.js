@@ -1,4 +1,5 @@
-const allShopProducts = [
+// const allShopProducts 
+window.allShopProducts = [
   {
     "id": "P001",
     "name": "Floral Cotton Peplum Top",
@@ -134,8 +135,8 @@ const allShopProducts = [
     ],
     "colors": [
       {
-        "code": "#00FF00",
-        "name": "Green",
+        "code": "#FF0000",
+        "name": "Red",
         "images": [
           "images/products/a3/v1.png",
           "images/products/a3/v2.png",
@@ -152,8 +153,8 @@ const allShopProducts = [
     "brand": "Slenor",
     "price": 462,
     "originalPrice": 662,
-    "rating": 4.4,
-    "ratingCount": 125,
+    "rating": 4.2,
+    "ratingCount": 46,
     "stock": true,
     "badge": "Sale",
     "isWishlist": false,
@@ -183,7 +184,7 @@ const allShopProducts = [
     ],
     "colors": [
       {
-        "code": "#00008B",
+        "code": "#0000FF",
         "name": "Dark Blue",
         "images": [
           "images/products/a4/v1.png",
@@ -232,8 +233,8 @@ const allShopProducts = [
     ],
     "colors": [
       {
-        "code": "#FFA500",
-        "name": "Orange",
+        "code": "#000000",
+        "name": "Black",
         "images": [
           "images/products/a5/v1.png",
           "images/products/a5/v2.png",
@@ -281,8 +282,8 @@ const allShopProducts = [
     ],
     "colors": [
       {
-        "code": "#000000",
-        "name": "Black",
+        "code": "#0000FF",
+        "name": "Dark Blue",
         "images": [
           "images/products/a6/v1.png",
           "images/products/a6/v2.png",
@@ -330,8 +331,8 @@ const allShopProducts = [
     ],
     "colors": [
       {
-        "code": "#FF0000",
-        "name": "Red",
+        "code": "#000000",
+        "name": "Black",
         "images": [
           "images/products/a7/v1.png",
           "images/products/a7/v2.png",
@@ -379,8 +380,8 @@ const allShopProducts = [
     ],
     "colors": [
       {
-        "code": "#00FF00",
-        "name": "Green",
+        "code": "#8d5e51",
+        "name": "Brown",
         "images": [
           "images/products/a8/v1.png",
           "images/products/a8/v2.png",
@@ -428,8 +429,8 @@ const allShopProducts = [
     ],
     "colors": [
       {
-        "code": "#00008B",
-        "name": "Dark Blue",
+        "code": "#8d5e51",
+        "name": "Brown",
         "images": [
           "images/products/a9/v1.png",
           "images/products/a9/v2.png",
@@ -477,8 +478,8 @@ const allShopProducts = [
     ],
     "colors": [
       {
-        "code": "#FFA500",
-        "name": "Orange",
+        "code": "#FF0000",
+        "name": "Red",
         "images": [
           "images/products/a10/v1.png",
           "images/products/a10/v2.png",
@@ -526,8 +527,8 @@ const allShopProducts = [
     ],
     "colors": [
       {
-        "code": "#000000",
-        "name": "Black",
+        "code": "#FF0000",
+        "name": "Red",
         "images": [
           "images/products/a11/v1.png",
           "images/products/a11/v2.png",
@@ -575,8 +576,8 @@ const allShopProducts = [
     ],
     "colors": [
       {
-        "code": "#FF0000",
-        "name": "Red",
+        "code": "#c2943e",
+        "name": "Yellow",
         "images": [
           "images/products/a12/v1.png",
           "images/products/a12/v2.png",
@@ -624,8 +625,8 @@ const allShopProducts = [
     ],
     "colors": [
       {
-        "code": "#00FF00",
-        "name": "Green",
+        "code": "#FF0000",
+        "name": "Red",
         "images": [
           "images/products/a13/v1.png",
           "images/products/a13/v2.png",
@@ -673,8 +674,8 @@ const allShopProducts = [
     ],
     "colors": [
       {
-        "code": "#00008B",
-        "name": "Dark Blue",
+        "code": "#000000",
+        "name": "Black",
         "images": [
           "images/products/a14/v1.png",
           "images/products/a14/v2.png",
@@ -771,8 +772,8 @@ const allShopProducts = [
     ],
     "colors": [
       {
-        "code": "#000000",
-        "name": "Black",
+        "code": "#0000FF",
+        "name": "Dark Blue",
         "images": [
           "images/products/a16/v1.png",
           "images/products/a16/v2.png",
@@ -820,8 +821,8 @@ const allShopProducts = [
     ],
     "colors": [
       {
-        "code": "#FF0000",
-        "name": "Red",
+        "code": "#8d5e51",
+        "name": "Brown",
         "images": [
           "images/products/a17/v1.png",
           "images/products/a17/v2.png",
@@ -869,8 +870,8 @@ const allShopProducts = [
     ],
     "colors": [
       {
-        "code": "#00FF00",
-        "name": "Green",
+        "code": "#0000FF",
+        "name": "Dark Blue",
         "images": [
           "images/products/a18/v1.png",
           "images/products/a18/v2.png",
@@ -918,8 +919,8 @@ const allShopProducts = [
     ],
     "colors": [
       {
-        "code": "#00008B",
-        "name": "Dark Blue",
+        "code": "#00FF00",
+        "name": "Green",
         "images": [
           "images/products/a19/v1.png",
           "images/products/a19/v2.png",
@@ -967,8 +968,8 @@ const allShopProducts = [
     ],
     "colors": [
       {
-        "code": "#FFA500",
-        "name": "Orange",
+        "code": "#c2943e",
+        "name": "Yellow",
         "images": [
           "images/products/a20/v1.png",
           "images/products/a20/v2.png",
@@ -1016,8 +1017,8 @@ const allShopProducts = [
     ],
     "colors": [
       {
-        "code": "#000000",
-        "name": "Black",
+        "code": "#c2943e",
+        "name": "Yellow",
         "images": [
           "images/products/a21/v1.png",
           "images/products/a21/v2.png",
@@ -1065,8 +1066,8 @@ const allShopProducts = [
     ],
     "colors": [
       {
-        "code": "#FF0000",
-        "name": "Red",
+        "code": "#c2943e",
+        "name": "Yellow",
         "images": [
           "images/products/a22/v1.png",
           "images/products/a22/v2.png",

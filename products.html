@@ -140,58 +140,20 @@
                                         <div id="vibeVSort" class="accordion-collapse collapse">
                                             <div class="accordion-body">
                                             <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="sort" id="lowToHigh">
+                                                <input class="form-check-input" type="radio" name="sort" id="lowToHigh" value="lowToHigh">
                                                 <label class="form-check-label" for="lowToHigh">Price: Low to High</label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="sort" id="highToLow">
+                                                <input class="form-check-input" type="radio" name="sort" id="highToLow" value="highToLow">
                                                 <label class="form-check-label" for="highToLow">Price: High to Low</label>
                                             </div>
                                             </div>
                                         </div>
                                         </div>
 
-                                        <!-- Size -->
-                                        <div class="accordion-item border-0 mb-2">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed vibeV-filter-btn bg-dark text-white px-3 py-2" type="button" data-bs-toggle="collapse" data-bs-target="#vibeVSize">
-                                            <span class="vibeV-filter-icon me-2">
-                                                <svg class="plus-icon" width="16" height="16" viewBox="0 0 24 24"><path fill="white" d="M19 11H13V5h-2v6H5v2h6v6h2v-6h6z"/></svg>
-                                                <svg class="minus-icon d-none" width="16" height="16" viewBox="0 0 24 24"><path fill="white" d="M19 13H5v-2h14v2z"/></svg>
-                                            </span>
-                                            Size
-                                            </button>
-                                        </h2>
-                                        <div id="vibeVSize" class="accordion-collapse collapse">
-                                            <div class="accordion-body">
-                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="sizeXS"><label class="form-check-label" for="sizeXS">XS</label></div>
-                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="sizeS"><label class="form-check-label" for="sizeS">S</label></div>
-                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="sizeM"><label class="form-check-label" for="sizeM">M</label></div>
-                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="sizeL"><label class="form-check-label" for="sizeL">L</label></div>
-                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="sizeXL"><label class="form-check-label" for="sizeXL">XL</label></div>
-                                            </div>
-                                        </div>
-                                        </div>
+                                       
 
-                                        <!-- Collection Tag -->
-                                        <div class="accordion-item border-0 mb-2">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed vibeV-filter-btn bg-dark text-white px-3 py-2" type="button" data-bs-toggle="collapse" data-bs-target="#vibeVTag">
-                                            <span class="vibeV-filter-icon me-2">
-                                                <svg class="plus-icon" width="16" height="16" viewBox="0 0 24 24"><path fill="white" d="M19 11H13V5h-2v6H5v2h6v6h2v-6h6z"/></svg>
-                                                <svg class="minus-icon d-none" width="16" height="16" viewBox="0 0 24 24"><path fill="white" d="M19 13H5v-2h14v2z"/></svg>
-                                            </span>
-                                            Collection Tag
-                                            </button>
-                                        </h2>
-                                        <div id="vibeVTag" class="accordion-collapse collapse">
-                                            <div class="accordion-body">
-                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="tagCasual"><label class="form-check-label" for="tagCasual">Casual</label></div>
-                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="tagParty"><label class="form-check-label" for="tagParty">Party</label></div>
-                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="tagFormal"><label class="form-check-label" for="tagFormal">Formal</label></div>
-                                            </div>
-                                        </div>
-                                        </div>
+                                        
 
                                         <!-- Color -->
                                         <div class="accordion-item border-0 mb-0">
@@ -206,11 +168,11 @@
                                         </h2>
                                         <div id="vibeVColor" class="accordion-collapse collapse show">
                                             <div class="accordion-body">
-                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="colorBlack"><label class="form-check-label ms-1" for="colorBlack"><span class="dot bg-black me-1"></span>Black</label></div>
-                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="colorRed"><label class="form-check-label ms-1" for="colorRed"><span class="dot bg-danger me-1"></span>Red</label></div>
-                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="colorGreen"><label class="form-check-label ms-1" for="colorGreen"><span class="dot bg-success me-1"></span>Green</label></div>
-                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="colorBlue"><label class="form-check-label ms-1" for="colorBlue"><span class="dot bg-primary me-1"></span>Dark Blue</label></div>
-                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="colorOrange"><label class="form-check-label ms-1" for="colorOrange"><span class="dot bg-warning me-1"></span>Orange</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="colorBlack" value="#000000"><label class="form-check-label ms-1" for="colorBlack"><span class="dot bg-black me-1"></span>Black</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="colorRed" value="#FF0000"><label class="form-check-label ms-1" for="colorRed"><span class="dot bg-danger me-1"></span>Red</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="colorGreen" value="#00FF00"><label class="form-check-label ms-1" for="colorGreen"><span class="dot bg-success me-1"></span>Green</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="colorBlue" value="#0000FF"><label class="form-check-label ms-1" for="colorBlue"><span class="dot bg-primary me-1"></span>Dark Blue</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="colorOrange" value="#FFA500"><label class="form-check-label ms-1" for="colorOrange"><span class="dot bg-warning me-1"></span>Orange</label></div>
                                             </div>
                                         </div>
                                         </div>

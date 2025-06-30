@@ -37,7 +37,7 @@ export function setupRegisterForm() {
     users.push({ firstName, lastName, email, password });
     saveUsers(users);
     saveLoggedInUser(email);
-    alert("Registration successful!");
+    // alert("Registration successful!");
 
     window.location.href = "cart.html"; // or homepage
   });
@@ -62,7 +62,7 @@ export function setupLoginForm() {
 
     if (isDemo) {
       saveLoggedInUser(email);
-      alert("Logged in as demo user.");
+      // alert("Logged in as demo user.");
       window.location.href = "cart.html"; // or homepage
       return;
     }

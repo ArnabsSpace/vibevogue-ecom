@@ -7,7 +7,8 @@ export function handleCheckoutButton() {
     checkoutBtn.addEventListener("click", () => {
       console.log("🛒 Checkout button clicked");
 
-      const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+      // const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+      const isLoggedIn = !!localStorage.getItem("vvLoggedIn");
       if (isLoggedIn) {
         window.location.href = "checkout.html";
       } else {
