@@ -82,7 +82,7 @@ function renderFullProduct(product) {
 </div>
 
 
-<div class="vv-product-actions d-flex justify-content-between align-items-center mt-3">
+<!--<div class="vv-product-actions d-flex justify-content-between align-items-center mt-3">
 <span class="d-flex align-items-center gap-2 small text-muted">
     <svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10s10-4.5 10-10S17.5 2 12 2m1 17h-2v-2h2v2m1.07-7.75l-.9.92C12.45 12.9 12 13.5 12 15h-2v-.5c0-1 .45-1.7 1.17-2.41l1.24-1.26c.37-.36.59-.86.59-1.41c0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25Z"/></svg>
     Easy Return
@@ -91,7 +91,7 @@ function renderFullProduct(product) {
     <svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M12.1 18.55c-.1 0-.1 0 0 0C10.14 17.24 4 13.19 4 8.61c0-2.34 1.84-4.18 4.18-4.18c1.42 0 2.67.69 3.42 1.74c.75-1.05 2-1.74 3.42-1.74c2.34 0 4.18 1.84 4.18 4.18c0 4.58-6.14 8.63-8.1 9.94Z"/></svg>
     Add To Wish List
 </span>
-</div>
+</div>-->
    
   `;
 

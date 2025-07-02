@@ -271,3 +271,57 @@ ul.vv-offcanvas-menu li a
   background: none;
   color: var(--white);
 }
+
+
+
+h2
+ {
+    font-weight: 500 !important;
+    font-size: 3rem;
+}
+h2.fw-bold
+ {
+    font-weight: 500 !important;
+    font-size: 3rem;
+}
+
+h3.fw-bold
+ {
+    font-weight: 500 !important;
+    font-size: 2.5rem;
+}
+
+h4.fw-bold
+ {
+    font-weight: 500 !important;
+    font-size: 2.2rem;
+}
+h5
+ {
+    font-weight: 500 !important;
+    font-size: 2rem;
+}
+
+h5.fw-bold
+ {
+    font-weight: 500 !important;
+    font-size: 2rem;
+}
+
+h6.fw-bold
+ {
+    font-weight: 500 !important;
+    font-size: 1.8rem;
+}
+
+.form-check-input:checked {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.form-check {
+    cursor: pointer;
+}
+.form-check label{
+    cursor: pointer;
+}

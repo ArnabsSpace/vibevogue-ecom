@@ -1,3 +1,4 @@
+@import url(common.css);
 body .wrapper {
 	 display: flex;
 	 align-items: flex-start;
@@ -98,7 +99,10 @@ span.offInnerPrice {
     line-height: 1.6;
   }
 
-
+#goToCartBtn {
+    background: var(--secondary-light);
+    border-color: var(--secondary-light);
+}
 
   @media (max-width: 576px) {
     .vv-product-tabs {

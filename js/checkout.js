@@ -54,9 +54,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // Clear cart
     localStorage.removeItem("cart");
 
-    alert(`Order placed via ${paymentMethod === 'card' ? 'Card' : 'Cash on Delivery'}`);
+    // alert(`Order placed via ${paymentMethod === 'card' ? 'Card' : 'Cash on Delivery'}`);
     window.location.href = "order-confirmation.html";
   });
+  
 
   // Calculate total with fake discount & shipping
   function calculateTotal(cartItems) {

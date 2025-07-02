@@ -644,7 +644,7 @@ section.couponCodeSection span.vv-discount-code {
 
 
 
-.vibeV-filter-btn { font-size: 14px; }
+.vibeV-filter-btn { font-size: 1rem; font-family: var(--font-body); font-weight: 600;}
 .dot {
   display: inline-block;
   width: 10px;
@@ -680,4 +680,44 @@ section.couponCodeSection span.vv-discount-code {
 
 .vv-about-values svg {
   margin-bottom: 0.5rem;
+}
+
+
+
+
+
+.form-control:focus {
+    color: var(--primary);
+    background-color: var(--white);
+    border-color: var(--secondary-light);
+    outline: 0;
+    box-shadow: none;
+}
+
+
+.dNone {
+  display: none;
+  /* transition: display 0.3s ease; */
+}
+.cursor-pointer { cursor: pointer; }
+.vv-faq-icon svg {
+  transition: transform 0.2s ease;
+}
+.vv-faq-answer {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.vv-faq-question h6 {
+    font-size: 2rem;
+}
+
+.vv-faq-answer {
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 500;
+    color: var(--primary);
+        background: #fff;
+    min-height: 100px;
+    padding: 16px;
+    /* transition: display 0.1s ease-in; */
 }

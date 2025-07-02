@@ -5,9 +5,15 @@
   width: 100%;
 }
 
-.vv-blog-section h5 {
-  font-size: 20px;
+.vv-blog-section h3 {
+  font-size: 3rem;
+  font-weight: 500 !important;
 }
+
+.vv-blog-section h5 {
+  font-size: 2rem;
+}
+
 
 .vv-blog-section p {
   font-size: 15px;
@@ -36,9 +42,12 @@
     max-height: 400px;
     }
     .blog-inner-content h2 {
-      font-weight: 600;
-      font-size: 1.75rem;
+      font-weight: 500;
+      font-size: 2.5rem;
     }
+    .blog-inner-sidebar h4 {
+    font-size: 2rem;
+}
     .blog-inner-content p {
       font-size: 1rem;
       line-height: 1.8;
@@ -80,8 +89,8 @@
 
 
     .related-blog-section h4 {
-    font-weight: 600;
-    font-size: 1.5rem;
+        font-weight: 500;
+    font-size: 3rem;
   }
 
   .related-blog-card {

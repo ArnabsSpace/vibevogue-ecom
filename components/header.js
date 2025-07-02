@@ -53,8 +53,8 @@ export function loadHeader() {
             </div>
 
             <a href="javascript:void(0)"><img src="images/search.svg" alt="Search" class="vv-icon" /></a>
-            <a href="wishlist.html"><img src="images/favriote.svg" alt="Favorites" class="vv-icon" /><span class="favHedr" id="favHeadRound">0</span></a>
-            <a href="cart.html"><img src="images/cart.svg" alt="Cart" class="vv-icon" /> <span class="cartHedr" id="cartHeadRound">0</span></a>
+            <a href="wishlist.html"><img src="images/favriote.svg" alt="Favorites" class="vv-icon" /><span class="favHedr" id="favHeadRound1">0</span></a>
+            <a href="cart.html"><img src="images/cart.svg" alt="Cart" class="vv-icon" /> <span class="cartHedr" id="cartHeadRound1">0</span></a>
           </div>
         </div>
       </nav>
@@ -72,6 +72,10 @@ export function loadHeader() {
         <li><a href="blog.html">Blog</a></li>
         <li><a href="contactus.html">Contact</a></li>
         <li class="offcanvas-auth-link"><a href="login.html">Login/Signup</a></li>
+        <li id="logoutLi" style="display: none;">
+          <a href="javascript:void(0)" id="logoutBtn1">Log Out</a>
+        </li>
+        
       </ul>
     </div>
   `;
@@ -89,7 +93,7 @@ export function loadHeader() {
     if (isLoggedIn) {
       loginLink?.classList.add("d-none");
       accountDropdown?.classList.remove("d-none");
-      if (offcanvasLoginLink) offcanvasLoginLink.innerHTML = `<a href="profile.html">My Account</a>`;
+      if (offcanvasLoginLink) offcanvasLoginLink.innerHTML = `<a href="order-confirmation.html">My Account</a>`;
     } else {
       loginLink?.classList.remove("d-none");
       accountDropdown?.classList.add("d-none");
@@ -101,9 +105,30 @@ export function loadHeader() {
     if (logoutBtn) {
       logoutBtn.addEventListener("click", (e) => {
         e.preventDefault();
-        localStorage.removeItem("vvLoggedIn");
+        // localStorage.removeItem("vvLoggedIn");
+        localStorage.clear();
         window.location.href = "login.html";
+
       });
+    }
+
+    // Logout logic
+    const logoutBtn1 = document.getElementById("logoutBtn1");
+    if (logoutBtn1) {
+      logoutBtn1.addEventListener("click", (e) => {
+        e.preventDefault();
+        // localStorage.removeItem("vvLoggedIn");
+        localStorage.clear();
+        window.location.href = "login.html";
+
+      });
+    }
+
+    const isLoggedInMob = localStorage.getItem("vvLoggedIn");
+    const logoutLi = document.getElementById("logoutLi");
+
+    if (isLoggedInMob) {
+      logoutLi.style.display = "block";
     }
   }, 50);
 

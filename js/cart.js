@@ -61,8 +61,16 @@ function updateCart() {
     cartItemsEl.insertAdjacentHTML("beforeend", itemHTML);
   });
 
-  const discount = Math.round(subtotal * 0.2);
+  // const discount = Math.round(subtotal * 0.4);
+  const orderItems = JSON.parse(localStorage.getItem("vvOrders")) || [];
+
+  const discountRate = orderItems.length > 0 ? 0.2 : 0.4;
+
+  const discount = Math.round(subtotal * discountRate);
+
   const total = subtotal - discount + deliveryFee;
+  // Update discount label text dynamically
+
 
   cartSummary.innerHTML = `
     <h6 class="fw-bold mb-4">Order Summary</h6>
@@ -71,7 +79,7 @@ function updateCart() {
       <span class="fw-bold">₹${subtotal}</span>
     </div>
     <div class="d-flex justify-content-between mb-2">
-      <span>Discount (-20%)</span>
+      <span id="discountLabel">Discount (-40%)</span>
       <span class="text-danger">-₹${discount}</span>
     </div>
     <div class="d-flex justify-content-between mb-3">
@@ -82,9 +90,14 @@ function updateCart() {
       <span class="fw-bold">Total</span>
       <span class="fw-bold fs-5">₹${total}</span>
     </div>
-    <div class="input-group mb-3">
-      <input type="text" class="form-control" placeholder="Add promo code">
-      <button class="btn btn-dark">Apply</button>
+    <div class="input-group mb-3 vv-promo-wrap">
+      <input type="text" class="form-control" placeholder="Add promo code" disabled>
+      <button class="btn btn-dark" disabled>Apply</button>
+    </div>
+
+    <!-- Success Message -->
+    <div class="alert alert-success p-2 mb-3 small rounded vv-promo-message">
+      <strong>VVSAVE</strong> code applied successfully!
     </div>
     <button class="btn btn-dark w-100 d-flex justify-content-between align-items-center go-to-Checkout">
       Go to Checkout
@@ -93,6 +106,11 @@ function updateCart() {
       </svg>
     </button>
   `;
+
+  const discountLabel = document.getElementById("discountLabel");
+if (discountLabel) {
+  discountLabel.textContent = `Discount (-${discountRate * 100}%)`;
+}
 
   handleCheckoutButton();
 }

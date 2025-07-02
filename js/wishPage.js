@@ -98,3 +98,16 @@ document.addEventListener("DOMContentLoaded", () => {
   renderWishlist();
   setupWishlistRemoveEvents();
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  
+
+  setInterval(() => {
+    const wishlist = JSON.parse(localStorage.getItem("wishlistProducts")) || [];
+
+  if (wishlist.length === 0) {
+    window.location.href = "products.html"; // or your shop page URL
+  }
+  }, 100);
+});
