@@ -79,7 +79,7 @@ export function loadFooter() {
     <div class="d-flex flex-column flex-md-row justify-content-between align-items-center small mt-3">
       <div class="mb-2 mb-md-0">
         VibeVogue © 2025 | All Rights Reserved | Theme by
-           <a href="https://arnabspace.in" class="text-light text-decoration-underline">arnabspace.in</a>
+           <!--<a href="https://arnabspace.in" class="text-light text-decoration-underline">arnabspace.in</a>-->
       </div>
       <div class="d-flex gap-2 mt-2 mt-md-0">
         <img src="images/visa.svg" alt="Visa" height="24">
